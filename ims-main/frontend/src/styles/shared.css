@@ -1,0 +1,86 @@
+/* --------------------------------------------
+   Shared BEM blocks reused across features.
+   Imported by index.css, so @apply resolves
+   theme tokens without @reference.
+   -------------------------------------------- */
+@layer components {
+  .form {
+    @apply space-y-3;
+  }
+
+  .form--spaced {
+    @apply space-y-4;
+  }
+
+  .form--grid {
+    @apply grid grid-cols-1 gap-3 sm:grid-cols-2;
+  }
+
+  .form__full {
+    @apply sm:col-span-2;
+  }
+
+  .filter-bar {
+    @apply mb-3 flex flex-wrap items-center gap-2;
+  }
+
+  .filter-bar__search {
+    @apply max-w-xs;
+  }
+
+  .filter-bar__search--wide {
+    @apply max-w-[200px];
+  }
+
+  .filter-bar__select {
+    @apply max-w-[180px];
+  }
+
+  .filter-bar__date {
+    @apply max-w-[160px];
+  }
+
+  .filter-bar__check {
+    @apply inline-flex cursor-pointer select-none items-center gap-2 rounded-full border border-border bg-surface px-3 py-2 text-sm font-medium text-muted-foreground shadow-sm transition-colors hover:bg-muted hover:text-foreground;
+  }
+
+  .filter-bar__check input {
+    @apply sr-only;
+  }
+
+  .filter-bar__check:has(input:checked) {
+    @apply border-accent/40 bg-accent-subtle text-accent-subtle-foreground;
+  }
+
+  .filter-bar__check:has(input:focus-visible) {
+    @apply ring-2 ring-accent/25;
+  }
+
+  .row-actions {
+    @apply flex justify-end gap-2;
+  }
+
+  .cell-right {
+    @apply text-right;
+  }
+
+  .mono-num {
+    @apply font-mono tabular-nums;
+  }
+
+  .mono-xs {
+    @apply font-mono text-xs;
+  }
+
+  .link {
+    @apply font-medium text-accent hover:underline;
+  }
+
+  .doc-link {
+    @apply inline-flex items-center gap-1 rounded-md border border-border bg-surface px-1.5 py-0.5 font-mono text-xs font-medium text-foreground shadow-sm transition-colors hover:border-accent/40 hover:bg-accent-subtle;
+  }
+
+  .sr-only {
+    @apply sr-only;
+  }
+}

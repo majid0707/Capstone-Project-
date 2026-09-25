@@ -1,0 +1,45 @@
+@reference "../../index.css";
+
+.txn-page__qty--in {
+  @apply font-medium text-success;
+}
+
+.txn-page__qty--out {
+  @apply font-medium text-danger;
+}
+
+.txn-page__card-qty {
+  @apply shrink-0 font-mono font-medium tabular-nums;
+}
+
+.txn-page__card-qty--in {
+  @apply text-success;
+}
+
+.txn-page__card-qty--out {
+  @apply text-danger;
+}
+
+.txn-page__card-note {
+  @apply mt-1 text-sm text-muted-foreground;
+}
+
+.txn-page__card-footer {
+  @apply mt-2 flex items-center justify-between gap-2 border-t border-border pt-2 text-xs text-muted-foreground;
+}
+
+.txn-page__po-hint {
+  @apply -mt-1 text-sm text-muted-foreground;
+}
+
+.txn-page__void-note {
+  @apply text-xs text-muted-foreground;
+}
+
+.txn-page__void {
+  @apply space-y-3;
+}
+
+.txn-page__void-text {
+  @apply text-sm text-muted-foreground;
+}

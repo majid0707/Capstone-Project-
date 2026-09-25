@@ -1,0 +1,49 @@
+@reference "../../index.css";
+
+.btn {
+  @apply inline-flex items-center justify-center gap-1.5 rounded-lg font-medium cursor-pointer transition-[background-color,color,opacity,transform] duration-150 active:scale-[0.98] disabled:cursor-not-allowed disabled:active:scale-100;
+}
+
+.btn--primary {
+  @apply bg-accent text-accent-foreground hover:opacity-90 disabled:bg-accent/50 disabled:text-accent-foreground/70;
+}
+
+.btn--secondary {
+  @apply bg-surface text-foreground border border-border hover:bg-muted disabled:opacity-50;
+}
+
+.btn--danger {
+  @apply bg-danger-subtle text-danger-foreground border border-danger/25 hover:bg-danger/15 disabled:opacity-50;
+}
+
+.btn--danger-ghost {
+  @apply bg-transparent text-danger hover:bg-danger-subtle dark:hover:bg-danger/15;
+}
+
+.btn--accent-ghost {
+  @apply bg-transparent text-accent hover:bg-accent-subtle dark:hover:bg-accent/15;
+}
+
+.btn--success {
+  @apply bg-success-subtle text-success-foreground border border-success/25 hover:bg-success/15 disabled:opacity-50;
+}
+
+.btn--ghost {
+  @apply bg-transparent text-muted-foreground hover:bg-muted hover:text-foreground;
+}
+
+.btn--sm {
+  @apply px-2.5 py-1.5 text-xs;
+}
+
+.btn--md {
+  @apply px-4 py-2 text-sm;
+}
+
+.btn--icon {
+  @apply h-8 w-8 p-0;
+}
+
+.btn__spinner {
+  @apply h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent;
+}
