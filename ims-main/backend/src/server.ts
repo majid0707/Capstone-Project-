@@ -3,9 +3,10 @@ import { env } from "./config/env";
 import { prisma } from "./lib/prisma";
 
 const app = createApp();
+const PORT = Number(env.PORT)  || 3000;
 
-const server = app.listen(env.PORT, () => {
-  console.log(`Backend WMS berjalan di http://localhost:${env.PORT} [${env.NODE_ENV}]`);
+const server = app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Backend WMS berjalan di http://0.0.0.0:${PORT} [${env.NODE_ENV}]`);
 });
 
 async function shutdown(signal: string) {
